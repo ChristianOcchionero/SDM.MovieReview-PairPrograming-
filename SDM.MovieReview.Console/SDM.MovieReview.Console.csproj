@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SDM.MovieReview.Methods\SDM.MovieReview.Methods.csproj" />
+      <ProjectReference Include="..\SDM.MovieReview.Movie\SDM.MovieReview.Movie.csproj" />
+      <ProjectReference Include="..\SDM.MoviewReview.Data\SDM.MoviewReview.Data.csproj" />
+    </ItemGroup>
+
+</Project>
