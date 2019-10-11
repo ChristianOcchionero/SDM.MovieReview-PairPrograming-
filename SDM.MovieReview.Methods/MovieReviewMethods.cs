@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using SDM.MoviewReview.Data;
+using static System.IComparable;
 
 namespace SDM.MovieReview.Methods
 {
@@ -10,24 +12,38 @@ namespace SDM.MovieReview.Methods
         private static  List<Movie.Movie> _movies; 
         public MovieReviewMethods(IDb ddb)
         {
-            _movies = ddb.SeedMockList("");
+            _movies = ddb.SeedMockList("c:/Users/Bruger/Downloads/ratings.json");
         }
-        
+     
+        /*
+        public static int binarySearch(List<Movie.Movie> movmov, Movie.Movie value)
+       {
+           movmov = _movies; 
+           
+           return 0;
+       }
+       */
+      
         public int GetUserReviews(int n)
         {
-            int count=0; 
-         
+            int count=0;
+
             foreach (var m in _movies)
-            {
-                if (m.ReviewId.Equals(n))
+                for (int i = 0; i < m.ReviewId; i++)
                 {
-                    count++; 
+                    if (m.ReviewId == n )
+                    {
+                        count++; 
+                    }
                 }
-             
-            }
+           
 
             return count;
         }
+        
+        
+        
+        
 
         public double GetAverageGradeByReviwer(int n)
         {

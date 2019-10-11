@@ -6,8 +6,13 @@ using SDM.MovieReview.Movie;
 
 namespace SDM.MoviewReview.Data
 {
-    public class FakeDb:IDb
+    public class Db:IDb
     {
+        public Db(String filepath)
+        {
+            SeedMockList( filepath);
+
+        }
         public List<Movie > SeedMockList(String filepath)
         {
             string result = string.Empty;
